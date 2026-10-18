@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Engineering from Scratch, simply</title>
+  <link rel="stylesheet" href="/reader/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="/reader/vendor/hl-light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="/reader/vendor/hl-dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/projects.css">
+  <link rel="stylesheet" href="/reader/style.css">
+</head>
+<body>
+  <header class="top">
+    <button class="icon" id="menu" aria-label="Show the course outline">☰</button>
+    <a class="brand" href="#/">AI Engineering <span>from Scratch</span></a>
+    <div class="progress" title="Lessons you marked as done">
+      <div class="bar"><i id="bar"></i></div>
+      <span id="progress-text">0 / 542 lessons</span>
+    </div>
+    <div class="search">
+      <input id="search" type="search" placeholder="Find a lesson…" autocomplete="off" aria-label="Find a lesson">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <button class="primary small" id="continue" hidden>Continue →</button>
+  </header>
+
+  <div class="layout">
+    <nav class="outline" id="outline" aria-label="Course outline"></nav>
+    <main id="main" tabindex="-1"></main>
+  </div>
+
+  <script src="/reader/vendor/marked.min.js"></script>
+  <script src="/reader/vendor/purify.min.js"></script>
+  <script src="/reader/vendor/katex/katex.min.js"></script>
+  <script src="/reader/vendor/highlight.min.js"></script>
+  <script src="/reader/vendor/mermaid.min.js"></script>
+  <!-- The course's own interactive figures, loaded unchanged from the course repo -->
+  <script src="/figure-manifest.js"></script>
+  <script src="/lesson-figures.js"></script>
+  <script src="/reader/app.js"></script>
+</body>
+</html>

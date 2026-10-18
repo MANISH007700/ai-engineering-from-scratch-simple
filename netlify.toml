@@ -1,0 +1,6 @@
+[build]
+  command = "git clone --depth 1 https://github.com/rohitg00/ai-engineering-from-scratch.git course && python3 build.py --dist dist"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
