@@ -12,7 +12,7 @@ This reader puts every part of the course into one order, from "Start here" to t
 - 392 lesson quizzes and 5 certification mock exams, answerable in the page.
 - 79 projects, 4 manuals, 2 certification tracks (67 lessons), 51 cheatsheets, the glossary and 14 learning paths.
 - A "Run it yourself" box on every lesson with the exact command to copy.
-- A coverage check: every one of the course repo's 8,990 files is either shown in the reader or is website/tooling code, with 0 missing.
+- A coverage check: every one of the course repo's 8,434 files is either shown in the reader or is website/tooling code, with 0 missing.
 
 ## Run it locally
 

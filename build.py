@@ -342,12 +342,14 @@ def dist(out: Path, catalog: dict, cov: dict) -> None:
                 if src.is_file() and not dst.exists():
                     dst.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy2(src, dst)
+    # README pages show images from assets/ and the website's figure folder, which are not lesson files.
+    shutil.copytree(REPO / "assets", out / "repo" / "assets", dirs_exist_ok=True)
     catalog["public"] = True
     (out / "data").mkdir()
     (out / "data" / "catalog.json").write_text(json.dumps(catalog))
     (out / "data" / "coverage.json").write_text(json.dumps(cov))
     shutil.copy(REPO / "LICENSE", out / "COURSE-LICENSE.txt")
-    (out / "_redirects").write_text("".join(f"/{d}/* /repo/{d}/:splat 200\n" for d in CONTENT_DIRS))
+    (out / "_redirects").write_text("/repo/site/* /:splat 200\n" + "".join(f"/{d}/* /repo/{d}/:splat 200\n" for d in CONTENT_DIRS))
     (out / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n")
     files = sum(1 for _ in out.rglob("*") if _.is_file())
     size = sum(p.stat().st_size for p in out.rglob("*") if p.is_file())
